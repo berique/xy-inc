@@ -1,12 +1,16 @@
 package com.xyinc.order;
 
-import com.xyinc.product.Product;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
  * Created by henriquemoreno on 30/04/17.
  */
-@Repository
-public interface OrderRepository extends CrudRepository<Order, Long> {
+@RepositoryRestResource
+public interface OrderRepository extends PagingAndSortingRepository<Order, Long> {
+
+    @Query("UPDATE OrderRepository SET active=false WHERE id = ?1")
+    @Override
+    void delete(Long aLong);
 }

@@ -1,6 +1,5 @@
 package com.xyinc.product;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xyinc.order.Order;
 import lombok.Data;
 
@@ -25,7 +24,6 @@ public class Product {
 
     private BigDecimal price;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "product")
     private List<Order> orders;
 }

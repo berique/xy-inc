@@ -1,14 +1,11 @@
 package com.xyinc.client;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xyinc.order.Order;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -23,15 +20,20 @@ public class Client {
     @GeneratedValue
     private Long id;
 
+    @NotNull
+    @Column(nullable = false)
     private String firstName;
 
+    @NotNull
+    @Column(nullable = false)
     private String lastName;
 
+    @NotNull
+    @Column(nullable = false)
     private String email;
 
     private Date birthDate;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
     private List<Order> orders;
 }
