@@ -7,3 +7,6 @@ Usando o spring-boot podemos usar o conceito de micro-service, sendo um serviço
 Para escalar o módulo poderá ser usado um loadbalance (haproxy ou nginx?), se o mesmo se encontrarem em servidores ou containers distintos.
 
 
+
+
+![Diagrama de arquitetura](src/site/resources/images/xinc.class.png)
