@@ -1,5 +1,7 @@
-package com.xyinc.order;
+package com.xyinc.repository;
 
+import com.xyinc.model.Order;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -9,8 +11,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource
 public interface OrderRepository extends PagingAndSortingRepository<Order, Long> {
-
-    @Query("UPDATE OrderRepository SET active=false WHERE id = ?1")
-    @Override
-    void delete(Long aLong);
 }

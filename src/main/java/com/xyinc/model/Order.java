@@ -1,8 +1,6 @@
-package com.xyinc.order;
+package com.xyinc.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.xyinc.client.Client;
-import com.xyinc.product.Product;
 import lombok.Data;
 import org.hibernate.annotations.Where;
 

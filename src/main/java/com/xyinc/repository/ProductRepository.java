@@ -1,5 +1,6 @@
-package com.xyinc.product;
+package com.xyinc.repository;
 
+import com.xyinc.model.Product;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

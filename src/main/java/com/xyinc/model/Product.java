@@ -1,6 +1,5 @@
-package com.xyinc.product;
+package com.xyinc.model;
 
-import com.xyinc.order.Order;
 import lombok.Data;
 
 import javax.persistence.Entity;
