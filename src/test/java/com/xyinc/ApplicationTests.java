@@ -1,6 +1,6 @@
 package com.xyinc;
 
-import com.xyinc.repository.ProductRepository;
+import com.xyinc.order.repository.ProductRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

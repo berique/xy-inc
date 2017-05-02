@@ -1,9 +1,13 @@
-package com.xyinc.model;
+package com.xyinc.order.model;
 
+import com.xyinc.softdelete.model.BaseIdEntity;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
@@ -14,10 +18,7 @@ import java.util.List;
 @Entity
 @Data
 @RequiredArgsConstructor
-public class Client {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class Client extends BaseIdEntity {
 
     @NotNull
     @Column(nullable = false)

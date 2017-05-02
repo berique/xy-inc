@@ -1,10 +1,9 @@
-package com.xyinc.model;
+package com.xyinc.order.model;
 
+import com.xyinc.softdelete.model.BaseIdEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,10 +13,7 @@ import java.util.List;
  */
 @Entity
 @Data
-public class Product {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class Product extends BaseIdEntity {
 
     private String name;
 
